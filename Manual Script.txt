@@ -1,0 +1,47 @@
+@Buy
+
+Scenario Outline: To Validate View list of product
+
+Given user click in the given link "https://demoblaze.com/"
+When user choose the category of productsThen user looks the proucts 
+
+
+Scenario Outline: To Validate View product details
+
+Given user click in the given link "https://demoblaze.com/"
+When user choose the right product for buying
+Then user click on the product icon or link
+
+
+Scenario Outline: To Validate add to card with valid data and links
+
+Given user click in the given link "https://demoblaze.com/"
+When user choose the right product for buying
+Then user click on the product icon or link
+Then user click on the "Add to cart" button
+Then  a pop up will overcome with valid message "Product added" and validate this
+
+
+Scenario Outline: To Validate checkout and buy the products
+
+Given user click on "Cart"
+When a new page will open with correct items
+Then user validate all the products for buying
+And user click on "Place order" button
+
+Given user fill the details Name:"name" Country:"country" City:"city" Credit card:"cardNo" Month:"month" Year:"year"
+When user click on "Purchase" button
+Then validate all the displayed deatils with user
+
+Example:
+|name        |country      |city      |cardNo       |month       |year      |
+|kumar       |XYZ            |ABC     |xxxxx          |jan             |2021   |
+
+@Invalid
+|name        |country      |city      |cardNo       |month       |year      |
+|44444       |XYZ           |ABC    |12345         |jan            |2021     |         	#Bug in Name field
+|Kumar      |444            |ABC    |12345         |jan            |2021	|      	#Bug in Country field
+|Kumar      |India	   |123     |12345         |jan            |2021	|      	#Bug in City field
+|Kumar      |India          |ABC    |xxxxx          |jan            |2021	|      	#Bug in Card no field field
+|Kumar      |India          |ABC    |12345         |123          |2021	|      	#Bug in Month field
+|Kumar      |India          |ABC    |12345         |jan           |DEF	|      	#Bug in Year field

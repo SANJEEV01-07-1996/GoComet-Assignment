@@ -1,0 +1,20 @@
+Bugs:-
+
+1. When we click on next or previous button in a particular category then item should either show only that category or it     should show no item of that category but it is going to different category. 
+2. Sometime when we click on product image instead of product blue link then page is not navigating to description page it     is remains in home page.
+3. When we click on product image from product description page, it should again navigate to product description page. but     it is not going anywhere.
+4. After adding product to cart, page should navigate to cart page but it remains same.
+5. When we click on Place Order, a Log in or Sign Up option should be open but it directly going to address page.
+6. No any field of Address page is validated. Means we can add Text in number field and Number in text field like name is     1234 and cradit card number - xxxxxx. so if we add this type of data and try to place order and there should be an error      come but here order is accepting.
+
+
+Improvement :-
+
+1. There should be a Search field for searching any product.
+2. There should be available all view of product like front , back, left, right.
+3. There is no way to buy product directly instead of adding into cart. Means there should be a button 'Buy now' beside Add 
+     to cart.
+4. There should be a counting icon on top of cart icon for showing how many item we have added till now.
+5. There should be an option for Increasing the product quantity in cart.
+6. There should be a section of my order so that we can check how many order we have ordered.
+7.  There sould be a Track option to track order.
